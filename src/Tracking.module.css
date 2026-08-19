@@ -1,0 +1,784 @@
+.page {
+  min-height: 100vh;
+  background: #f7f9fc;
+  color: #172033;
+  padding: 28px 7%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.backButton {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* CONTAINER */
+
+.container {
+  max-width: 950px;
+  margin: auto;
+}
+
+/* EMERGENCY BANNER */
+
+.emergencyBanner {
+  max-width: 950px;
+  margin: 0 auto 20px;
+
+  padding: 16px 20px;
+
+  border-radius: 16px;
+
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.emergencyIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  background: #dc2626;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emergencyBanner strong {
+  color: #b91c1c;
+  font-size: 15px;
+}
+
+.emergencyBanner p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* STATUS */
+
+.statusCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 17px;
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+.statusIcon {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 12px;
+
+  background: #ecfdf5;
+  color: #16a34a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statusContent {
+  flex: 1;
+}
+
+.statusContent > span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #94a3b8;
+}
+
+.statusContent h3 {
+  margin: 3px 0;
+  font-size: 16px;
+}
+
+.statusContent p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.statusDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.statusOn {
+  background: #22c55e;
+}
+
+.statusOff {
+  background: #94a3b8;
+}
+
+.refreshButton {
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.spinning {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* MAP */
+
+.mapCard {
+  margin-top: 18px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.map {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+
+  background-color: #e9eef2;
+
+  background-image:
+    linear-gradient(
+      25deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.9) 49%,
+      rgba(255, 255, 255, 0.9) 52%,
+      transparent 53%
+    ),
+    linear-gradient(
+      155deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.9) 49%,
+      rgba(255, 255, 255, 0.9) 52%,
+      transparent 53%
+    );
+}
+
+/* MAP ROADS */
+
+.road {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 100px;
+}
+
+.roadOne {
+  width: 120%;
+  height: 18px;
+  top: 30%;
+  left: -10%;
+  transform: rotate(-14deg);
+}
+
+.roadTwo {
+  width: 120%;
+  height: 13px;
+  top: 60%;
+  left: -10%;
+  transform: rotate(21deg);
+}
+
+.roadThree {
+  width: 15px;
+  height: 120%;
+  top: -10%;
+  left: 40%;
+  transform: rotate(18deg);
+}
+
+.roadFour {
+  width: 11px;
+  height: 120%;
+  top: -10%;
+  left: 72%;
+  transform: rotate(-25deg);
+}
+
+/* LOCATION */
+
+.accuracyCircle {
+  position: absolute;
+
+  width: 125px;
+  height: 125px;
+
+  border-radius: 50%;
+
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+
+  top: 50%;
+  left: 50%;
+
+  transform-origin: center;
+
+  margin-left: -62px;
+  margin-top: -62px;
+
+  transition: transform 0.3s ease;
+}
+
+.locationMarker {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 30px;
+  height: 30px;
+
+  transform: translate(-50%, -50%);
+}
+
+.markerPulse {
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 50%;
+
+  background: rgba(37, 99, 235, 0.2);
+
+  animation: pulse 2s infinite;
+}
+
+.markerDot {
+  position: absolute;
+
+  width: 15px;
+  height: 15px;
+
+  background: #2563eb;
+
+  border: 3px solid white;
+
+  border-radius: 50%;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.youAreHere {
+  position: absolute;
+
+  top: calc(50% + 25px);
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  padding: 7px 11px;
+
+  background: white;
+
+  border-radius: 8px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* MAP CONTROLS */
+
+.mapControls {
+  position: absolute;
+
+  right: 15px;
+  top: 15px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.mapControls button {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.mapControls button + button {
+  border-top: 1px solid #e5e7eb;
+}
+
+.recenterButton {
+  position: absolute;
+
+  right: 15px;
+  bottom: 15px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* DETAILS */
+
+.detailsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+
+  margin-top: 18px;
+}
+
+.detailCard {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 15px;
+
+  padding: 17px;
+}
+
+.detailCard span {
+  display: block;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+
+  margin-bottom: 7px;
+}
+
+.detailCard strong {
+  font-size: 13px;
+}
+
+/* GENERAL CARD */
+
+.card {
+  margin-top: 18px;
+
+  padding: 20px;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 17px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.cardIcon {
+  width: 43px;
+  height: 43px;
+
+  border-radius: 11px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardHeader > div:nth-child(2) {
+  flex: 1;
+}
+
+.cardHeader h3 {
+  margin: 0 0 4px;
+
+  font-size: 15px;
+}
+
+.cardHeader p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+/* TOGGLE */
+
+.toggle {
+  width: 48px;
+  height: 27px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: #cbd5e1;
+
+  padding: 3px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.toggle span {
+  display: block;
+
+  width: 21px;
+  height: 21px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  transition: 0.2s;
+}
+
+.toggleActive {
+  background: #22c55e;
+}
+
+.toggleActive span {
+  transform: translateX(21px);
+}
+
+.divider {
+  height: 1px;
+
+  background: #e5e7eb;
+
+  margin: 18px 0;
+}
+
+.sharingText {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+/* EMERGENCY CARD */
+
+.activeEmergencyCard {
+  border-color: #fecaca;
+}
+
+.emergencyCardIcon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.emergencyStatus {
+  margin-top: 17px;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.emergencyStatus span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+}
+
+.emergencyActive {
+  background: #fff1f2;
+  color: #b91c1c;
+}
+
+.emergencyActive span {
+  background: #dc2626;
+}
+
+.emergencyInactive {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.emergencyInactive span {
+  background: #94a3b8;
+}
+
+/* ACTIONS */
+
+.actions {
+  display: flex;
+
+  gap: 13px;
+
+  margin-top: 20px;
+}
+
+.primaryButton,
+.secondaryButton {
+  flex: 1;
+
+  height: 48px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+}
+
+.primaryButton {
+  border: none;
+
+  background: #2563eb;
+
+  color: white;
+}
+
+.secondaryButton {
+  border: 1px solid #cbd5e1;
+
+  background: white;
+
+  color: #334155;
+}
+
+/* ERROR */
+
+.errorMessage {
+  margin-top: 18px;
+
+  padding: 14px;
+
+  background: #fff7ed;
+
+  border: 1px solid #fed7aa;
+
+  border-radius: 12px;
+
+  color: #9a3412;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 13px;
+}
+
+.errorMessage button {
+  margin-left: auto;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ea580c;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* TOAST */
+
+.toast {
+  position: fixed;
+
+  bottom: 25px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: #172033;
+
+  color: white;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+  z-index: 100;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+  .page {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .map {
+    height: 330px;
+  }
+
+  .detailsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statusCard {
+    align-items: flex-start;
+  }
+
+  .statusDot {
+    margin-top: 8px;
+  }
+
+  .refreshButton {
+    margin-left: auto;
+  }
+
+  .map {
+    height: 300px;
+  }
+
+}

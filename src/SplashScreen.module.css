@@ -1,0 +1,424 @@
+.splashScreen {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  min-height: 650px;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff;
+  color: #1f2937;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  isolation: isolate;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.content {
+  position: relative;
+  z-index: 10;
+
+  width: 90%;
+  max-width: 430px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding-bottom: 120px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logoWrapper {
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+.logo {
+  width: 130px;
+  height: 130px;
+
+  filter: drop-shadow(
+    0 10px 20px rgba(239, 51, 64, 0.15)
+  );
+
+  animation: logoAppear 0.7s ease forwards;
+}
+
+@keyframes logoAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.brandName {
+  margin: 0;
+
+  font-size: 32px;
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  color: #1f2937;
+
+  animation: fadeUp 0.7s ease 0.15s both;
+}
+
+.brandName span {
+  color: #ef3340;
+}
+
+.brandSubtitle {
+  margin: 9px 0 0;
+
+  color: #ef3340;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  animation: fadeUp 0.7s ease 0.25s both;
+}
+
+/* =========================
+   TAGLINE
+========================= */
+
+.tagline {
+  margin: 42px 0 0;
+
+  font-size: 26px;
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  color: #1f2937;
+
+  animation: fadeUp 0.7s ease 0.35s both;
+}
+
+.tagline span {
+  color: #ef3340;
+}
+
+.description {
+  margin: 10px 0 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  animation: fadeUp 0.7s ease 0.45s both;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.loadingSection {
+  margin-top: 55px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  animation: fadeUp 0.7s ease 0.55s both;
+}
+
+.loadingSection p {
+  margin: 12px 0 0;
+
+  font-size: 11px;
+
+  color: #9ca3af;
+}
+
+.loader {
+  position: relative;
+
+  width: 35px;
+  height: 35px;
+
+  border: 3px solid #fee2e2;
+  border-top-color: #ef3340;
+
+  border-radius: 50%;
+
+  animation: spin 0.9s linear infinite;
+}
+
+.loader span {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  top: 2px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #ef3340;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   MEDICAL SYMBOLS
+========================= */
+
+.medicalSymbol {
+  position: absolute;
+
+  z-index: 1;
+
+  color: rgba(239, 51, 64, 0.07);
+
+  font-weight: 800;
+
+  pointer-events: none;
+}
+
+.symbolOne {
+  top: 12%;
+  left: 10%;
+
+  font-size: 80px;
+
+  transform: rotate(-10deg);
+}
+
+.symbolTwo {
+  top: 27%;
+  right: 7%;
+
+  font-size: 55px;
+
+  transform: rotate(15deg);
+}
+
+.symbolThree {
+  bottom: 30%;
+  left: 5%;
+
+  font-size: 48px;
+
+  transform: rotate(-12deg);
+}
+
+.symbolFour {
+  bottom: 20%;
+  right: 11%;
+
+  font-size: 70px;
+
+  transform: rotate(10deg);
+}
+
+/* =========================
+   DOTTED CIRCLES
+========================= */
+
+.dotCircle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 2px dotted rgba(239, 51, 64, 0.1);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.dotCircleOne {
+  width: 300px;
+  height: 300px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -57%);
+}
+
+.dotCircleTwo {
+  width: 390px;
+  height: 390px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -57%);
+
+  border-color: rgba(239, 51, 64, 0.045);
+}
+
+/* =========================
+   BOTTOM WAVES
+========================= */
+
+.waveContainer {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 155px;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+.wave {
+  position: absolute;
+
+  left: -10%;
+
+  width: 120%;
+
+  border-radius: 50% 50% 0 0 /
+    100% 100% 0 0;
+}
+
+.waveLight {
+  bottom: 45px;
+
+  height: 110px;
+
+  background: #fff1f2;
+
+  transform: rotate(-2deg);
+}
+
+.waveMedium {
+  bottom: 18px;
+
+  height: 115px;
+
+  background: #fecdd3;
+
+  transform: rotate(2deg);
+}
+
+.waveRed {
+  bottom: -38px;
+
+  height: 120px;
+
+  background: #ef3340;
+
+  transform: rotate(-1deg);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+  .content {
+    padding-bottom: 95px;
+  }
+
+  .logoWrapper {
+    width: 125px;
+    height: 125px;
+  }
+
+  .logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .brandName {
+    font-size: 28px;
+  }
+
+  .tagline {
+    margin-top: 30px;
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .loadingSection {
+    margin-top: 42px;
+  }
+}
+
+/* =========================
+   DESKTOP SAFETY
+========================= */
+
+@media (min-width: 600px) {
+  .splashScreen {
+    max-width: 430px;
+    margin: 0 auto;
+
+    border-left: 1px solid #f3f4f6;
+    border-right: 1px solid #f3f4f6;
+  }
+}

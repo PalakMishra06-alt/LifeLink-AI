@@ -1,0 +1,529 @@
+/* =========================================================
+   EMERGENCY DASHBOARD
+========================================================= */
+
+.page {
+  min-height: 100vh;
+  padding: 24px;
+  background: #f5f6f8;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  padding-bottom: 40px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.backBtn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.backBtn:hover {
+  background: #f1f1f1;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #1f2937;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* =========================================================
+   ACTIVE EMERGENCY
+========================================================= */
+
+.emergencyCard {
+  background: #fff0f1;
+  border: 1px solid #ffd5d9;
+  border-radius: 20px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.statusDot {
+  width: 14px;
+  height: 14px;
+  background: #e63946;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px #ffdfe2;
+}
+
+.statusLabel {
+  color: #e63946;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.emergencyCard h2 {
+  margin: 4px 0 0;
+  color: #222;
+  font-size: 22px;
+}
+
+.statusText {
+  color: #666;
+  line-height: 1.5;
+  margin: 18px 0;
+}
+
+.sosBtn {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  background: #e63946;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sosBtn:hover {
+  background: #d62839;
+}
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.locationCard {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.locationIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #eef5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  flex-shrink: 0;
+}
+
+.locationInfo {
+  flex: 1;
+}
+
+.locationInfo span {
+  font-size: 11px;
+  color: #888;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.locationInfo h3 {
+  margin: 4px 0;
+  font-size: 16px;
+  color: #222;
+}
+
+.locationInfo p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.trackBtn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background: #eef5ff;
+  color: #2563eb;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.trackBtn:hover {
+  background: #dbeafe;
+}
+
+/* =========================================================
+   AI EMERGENCY SEVERITY
+========================================================= */
+
+.aiSeverityCard {
+  margin-top: 20px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid #ffe0e3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.aiSeverityTop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.aiSeverityIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #fff0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  flex-shrink: 0;
+}
+
+.aiLabel {
+  display: block;
+  color: #888;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.aiSeverityTop h2 {
+  margin: 4px 0 0;
+  color: #e63946;
+  font-size: 20px;
+}
+
+.highBadge {
+  margin-left: auto;
+  background: #ffe1e4;
+  color: #e63946;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.aiSeverityText {
+  margin: 18px 0;
+  color: #666;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.recommendation {
+  background: #fff7f7;
+  border-left: 4px solid #e63946;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.recommendation strong {
+  color: #333;
+  font-size: 14px;
+}
+
+.recommendation p {
+  margin: 7px 0 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+  margin-top: 28px;
+}
+
+.sectionTitle h2 {
+  margin: 0;
+  color: #222;
+}
+
+.sectionTitle p {
+  margin: 5px 0 14px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.actionCard {
+  border: none;
+  text-align: left;
+  text-decoration: none;
+  background: white;
+  border-radius: 17px;
+  padding: 18px;
+  color: #222;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.actionCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+}
+
+.actionIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #fff0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.actionCard h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.actionCard p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   NEARBY AMBULANCE ALERT
+========================================================= */
+
+.ambulanceAlert {
+  margin-top: 24px;
+  background: #eef8ff;
+  border: 1px solid #cfeaff;
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ambulanceAlertIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.ambulanceAlertInfo {
+  flex: 1;
+}
+
+.ambulanceAlertInfo span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #2563eb;
+  letter-spacing: 1px;
+}
+
+.ambulanceAlertInfo h3 {
+  margin: 4px 0;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.ambulanceAlertInfo p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.viewBtn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.viewBtn:hover {
+  background: #1d4ed8;
+}
+
+/* =========================================================
+   RECENT EMERGENCY
+========================================================= */
+
+.recentCard {
+  margin-top: 28px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #1f2937;
+  color: white;
+}
+
+.recentCard span {
+  font-size: 11px;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.recentCard h3 {
+  margin: 7px 0;
+  font-size: 17px;
+}
+
+.recentCard p {
+  margin: 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.recentCard button {
+  margin-top: 15px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* =========================================================
+   CANCEL
+========================================================= */
+
+.cancelBtn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border: 1px solid #e63946;
+  border-radius: 12px;
+  background: white;
+  color: #e63946;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancelBtn:hover {
+  background: #fff0f1;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .page {
+    padding: 16px;
+  }
+
+  .header h1 {
+    font-size: 23px;
+  }
+
+  .header p {
+    font-size: 13px;
+  }
+
+  .locationCard {
+    align-items: flex-start;
+  }
+
+  .trackBtn {
+    align-self: center;
+  }
+
+  .actionGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .actionCard {
+    padding: 15px;
+  }
+
+  .ambulanceAlert {
+    align-items: flex-start;
+  }
+
+  .viewBtn {
+    align-self: center;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .actionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .locationCard {
+    flex-wrap: wrap;
+  }
+
+  .trackBtn {
+    width: 100%;
+  }
+
+  .ambulanceAlert {
+    flex-wrap: wrap;
+  }
+
+  .viewBtn {
+    width: 100%;
+  }
+
+  .highBadge {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+
+  .aiSeverityTop {
+    align-items: flex-start;
+  }
+}
