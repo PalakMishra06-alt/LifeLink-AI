@@ -8,6 +8,7 @@ export default function Home({
   onDashboard,
   onAmbulance,
   onHospital,
+  onProfile,
 }) {
   return (
     <main className={styles.page}>
@@ -29,8 +30,11 @@ export default function Home({
 
         </div>
 
+        {/* PROFILE BUTTON */}
+
         <button
           className={styles.profileBtn}
+          onClick={onProfile}
           type="button"
         >
           👤
@@ -116,7 +120,7 @@ export default function Home({
 
           <div className={styles.grid}>
 
-            {/* ================= LIVE LOCATION ================= */}
+            {/* LIVE LOCATION */}
 
             <button
               className={styles.card}
@@ -124,9 +128,7 @@ export default function Home({
               type="button"
             >
 
-              <div
-                className={`${styles.cardIcon} ${styles.location}`}
-              >
+              <div className={`${styles.cardIcon} ${styles.location}`}>
                 📍
               </div>
 
@@ -149,7 +151,7 @@ export default function Home({
             </button>
 
 
-            {/* ================= EMERGENCY DASHBOARD ================= */}
+            {/* EMERGENCY DASHBOARD */}
 
             <button
               className={styles.card}
@@ -157,9 +159,7 @@ export default function Home({
               type="button"
             >
 
-              <div
-                className={`${styles.cardIcon} ${styles.contacts}`}
-              >
+              <div className={`${styles.cardIcon} ${styles.contacts}`}>
                 🚨
               </div>
 
@@ -182,7 +182,7 @@ export default function Home({
             </button>
 
 
-            {/* ================= TRACKING ================= */}
+            {/* TRACKING */}
 
             <button
               className={styles.card}
@@ -190,9 +190,7 @@ export default function Home({
               type="button"
             >
 
-              <div
-                className={`${styles.cardIcon} ${styles.tracking}`}
-              >
+              <div className={`${styles.cardIcon} ${styles.tracking}`}>
                 🛰️
               </div>
 
@@ -215,7 +213,7 @@ export default function Home({
             </button>
 
 
-            {/* ================= HISTORY ================= */}
+            {/* HISTORY */}
 
             <button
               className={styles.card}
@@ -223,9 +221,7 @@ export default function Home({
               type="button"
             >
 
-              <div
-                className={`${styles.cardIcon} ${styles.history}`}
-              >
+              <div className={`${styles.cardIcon} ${styles.history}`}>
                 🕘
               </div>
 
@@ -248,7 +244,7 @@ export default function Home({
             </button>
 
 
-            {/* ================= BLOOD DONOR ================= */}
+            {/* BLOOD DONOR */}
 
             <button
               className={styles.card}
@@ -256,9 +252,7 @@ export default function Home({
               type="button"
             >
 
-              <div
-                className={`${styles.cardIcon} ${styles.blood}`}
-              >
+              <div className={`${styles.cardIcon} ${styles.blood}`}>
                 🩸
               </div>
 
@@ -281,7 +275,7 @@ export default function Home({
             </button>
 
 
-            {/* ================= NEARBY AMBULANCE ================= */}
+            {/* AMBULANCE */}
 
             <button
               className={styles.card}
@@ -289,9 +283,7 @@ export default function Home({
               type="button"
             >
 
-              <div
-                className={`${styles.cardIcon} ${styles.ambulance}`}
-              >
+              <div className={`${styles.cardIcon} ${styles.ambulance}`}>
                 🚑
               </div>
 
@@ -314,7 +306,7 @@ export default function Home({
             </button>
 
 
-            {/* ================= HOSPITAL NOTIFICATIONS ================= */}
+            {/* HOSPITAL */}
 
             <button
               className={styles.card}
@@ -322,9 +314,7 @@ export default function Home({
               type="button"
             >
 
-              <div
-                className={`${styles.cardIcon} ${styles.hospital}`}
-              >
+              <div className={`${styles.cardIcon} ${styles.hospital}`}>
                 🏥
               </div>
 
@@ -347,16 +337,14 @@ export default function Home({
             </button>
 
 
-            {/* ================= EMERGENCY CALL ================= */}
+            {/* EMERGENCY CALL */}
 
             <a
               className={styles.card}
               href="tel:112"
             >
 
-              <div
-                className={`${styles.cardIcon} ${styles.call}`}
-              >
+              <div className={`${styles.cardIcon} ${styles.call}`}>
                 📞
               </div>
 
@@ -535,6 +523,7 @@ export default function Home({
 
         <button
           className={styles.navItem}
+          onClick={onProfile}
           type="button"
         >
 

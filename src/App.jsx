@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import SplashScreen from "./SplashScreen";
 import Home from "./Home";
+import Profile from "./Profile";
 import SOS from "./SOS";
 import Tracking from "./Tracking";
 import History from "./History";
@@ -27,12 +28,10 @@ export default function App() {
 
   return (
     <EmergencyProvider>
-
       {showSplash ? (
         <SplashScreen />
       ) : (
         <>
-
           {/* ================= HOME ================= */}
 
           {page === "home" && (
@@ -44,9 +43,17 @@ export default function App() {
               onDashboard={() => setPage("dashboard")}
               onAmbulance={() => setPage("ambulance")}
               onHospital={() => setPage("hospital")}
+              onProfile={() => setPage("profile")}
             />
           )}
 
+          {/* ================= PROFILE ================= */}
+
+          {page === "profile" && (
+            <Profile
+              onBack={() => setPage("home")}
+            />
+          )}
 
           {/* ================= SOS ================= */}
 
@@ -57,7 +64,6 @@ export default function App() {
             />
           )}
 
-
           {/* ================= TRACKING ================= */}
 
           {page === "tracking" && (
@@ -65,7 +71,6 @@ export default function App() {
               onBack={() => setPage("home")}
             />
           )}
-
 
           {/* ================= HISTORY ================= */}
 
@@ -75,7 +80,6 @@ export default function App() {
             />
           )}
 
-
           {/* ================= BLOOD DONOR ================= */}
 
           {page === "blood" && (
@@ -83,7 +87,6 @@ export default function App() {
               onBack={() => setPage("home")}
             />
           )}
-
 
           {/* ================= EMERGENCY DASHBOARD ================= */}
 
@@ -99,7 +102,6 @@ export default function App() {
             />
           )}
 
-
           {/* ================= AI SEVERITY ================= */}
 
           {page === "severity" && (
@@ -107,7 +109,6 @@ export default function App() {
               onBack={() => setPage("dashboard")}
             />
           )}
-
 
           {/* ================= AMBULANCE ================= */}
 
@@ -117,7 +118,6 @@ export default function App() {
             />
           )}
 
-
           {/* ================= HOSPITAL ================= */}
 
           {page === "hospital" && (
@@ -125,10 +125,8 @@ export default function App() {
               onBack={() => setPage("dashboard")}
             />
           )}
-
         </>
       )}
-
     </EmergencyProvider>
   );
 }
