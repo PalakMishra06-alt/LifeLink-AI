@@ -1,0 +1,375 @@
+.page {
+  min-height: 100vh;
+  padding: 24px;
+  background: #f5f6f8;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  color: #1f2937;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.backBtn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.headerLabel {
+  margin: 0 0 4px;
+  color: #e63946;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header > div > p:last-child {
+  margin: 5px 0 0;
+  color: #777;
+}
+
+
+/* INTRO */
+
+.introCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.aiIcon {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #f1eaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+}
+
+.introCard h2 {
+  margin: 0 0 6px;
+  font-size: 19px;
+}
+
+.introCard p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* SECTION */
+
+.section {
+  margin-top: 28px;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.sectionHeading p {
+  margin: 5px 0 15px;
+  color: #777;
+  font-size: 14px;
+}
+
+
+/* SYMPTOMS */
+
+.symptomGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.symptomCard {
+  border: 2px solid transparent;
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.2s;
+}
+
+.symptomCard:hover {
+  transform: translateY(-2px);
+}
+
+.symptomCard.selected {
+  border-color: #e63946;
+  background: #fff3f4;
+}
+
+.symptomIcon {
+  width: 43px;
+  height: 43px;
+  border-radius: 12px;
+  background: #f5f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  flex-shrink: 0;
+}
+
+.symptomText h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #222;
+}
+
+.symptomText span {
+  display: block;
+  margin-top: 5px;
+  color: #e63946;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+
+/* ANALYZE */
+
+.analyzeBtn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: #e63946;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.analyzeBtn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+
+/* RESULT */
+
+.resultCard {
+  margin-top: 24px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.resultHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.resultAI {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #f1eaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.resultHeader span {
+  color: #8b5cf6;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.resultHeader h2 {
+  margin: 4px 0 0;
+  font-size: 20px;
+}
+
+
+/* SEVERITY */
+
+.severityBox {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.severityIcon {
+  font-size: 27px;
+}
+
+.severityBox span {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.severityBox h3 {
+  margin: 4px 0 0;
+  font-size: 24px;
+}
+
+.high {
+  background: #fff0f1;
+  color: #dc2626;
+  border: 1px solid #ffd5d9;
+}
+
+.medium {
+  background: #fff8e8;
+  color: #d97706;
+  border: 1px solid #fde68a;
+}
+
+.low {
+  background: #effdf5;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+
+/* SCORE */
+
+.scoreBox {
+  margin-top: 14px;
+  padding: 14px;
+  background: #f5f6f8;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scoreBox span {
+  color: #777;
+  font-size: 13px;
+}
+
+.scoreBox strong {
+  font-size: 22px;
+}
+
+
+/* RECOMMENDATION */
+
+.recommendation {
+  margin-top: 14px;
+  padding: 15px;
+  border-radius: 13px;
+  background: #f8fafc;
+}
+
+.recommendation h3 {
+  margin: 0 0 7px;
+  font-size: 14px;
+}
+
+.recommendation p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* HIGH WARNING */
+
+.emergencyWarning {
+  margin-top: 14px;
+  padding: 15px;
+  border-radius: 13px;
+  background: #fff0f1;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.emergencyWarning p {
+  margin: 7px 0 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+
+/* RESET */
+
+.resetBtn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  color: #444;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* DISCLAIMER */
+
+.disclaimer {
+  margin: 22px 0 0;
+  text-align: center;
+  color: #888;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .page {
+    padding: 16px;
+  }
+
+  .header h1 {
+    font-size: 23px;
+  }
+
+  .symptomGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .introCard {
+    align-items: flex-start;
+  }
+}

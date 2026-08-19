@@ -9,6 +9,7 @@ import BloodDonor from "./BloodDonor";
 import EmergencyDashboard from "./EmergencyDashboard";
 import AmbulanceAlerts from "./AmbulanceAlerts";
 import HospitalNotifications from "./HospitalNotifications";
+import AISeverity from "./AISeverity";
 
 import { EmergencyProvider } from "./context/EmergencyContext";
 
@@ -30,7 +31,6 @@ export default function App() {
       {showSplash ? (
         <SplashScreen />
       ) : (
-
         <>
 
           {/* ================= HOME ================= */}
@@ -76,7 +76,7 @@ export default function App() {
           )}
 
 
-          {/* ================= BLOOD ================= */}
+          {/* ================= BLOOD DONOR ================= */}
 
           {page === "blood" && (
             <BloodDonor
@@ -85,7 +85,7 @@ export default function App() {
           )}
 
 
-          {/* ================= DASHBOARD ================= */}
+          {/* ================= EMERGENCY DASHBOARD ================= */}
 
           {page === "dashboard" && (
             <EmergencyDashboard
@@ -95,7 +95,16 @@ export default function App() {
               onBloodDonor={() => setPage("blood")}
               onHistory={() => setPage("history")}
               onAmbulance={() => setPage("ambulance")}
-              onHospital={() => setPage("hospital")}
+              onSeverity={() => setPage("severity")}
+            />
+          )}
+
+
+          {/* ================= AI SEVERITY ================= */}
+
+          {page === "severity" && (
+            <AISeverity
+              onBack={() => setPage("dashboard")}
             />
           )}
 
@@ -118,7 +127,6 @@ export default function App() {
           )}
 
         </>
-
       )}
 
     </EmergencyProvider>
